@@ -10,8 +10,8 @@ Route::get('/about', function () {
     return view('about');
 }) ->name('about');
 
-Route::get('/service', function () {
-    return view('service');
+Route::get('/service/{service_id}/{service_name}/{service_title?}', function ($service_id, $service_name,$service_title = null) {
+    return "service".''.$service_id.''.$service_name.''.$service_title; 
 })->name('service');
 
 Route::get('/contact', function () {
